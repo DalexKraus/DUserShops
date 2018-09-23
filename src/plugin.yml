@@ -1,0 +1,8 @@
+name: DUserShops
+version: 1.0
+author: dalex
+main: at.dalex.usershops.Main
+commands:
+  shop:
+    description: Main command for the UserShops plugin
+    usage: /<command>
