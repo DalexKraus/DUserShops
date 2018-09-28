@@ -15,20 +15,20 @@ public class CommandCreate implements ICommand {
 	@Override
 	public void execute(Player p, String[] args) {
 		Location playerLocation = p.getLocation();
-		//Prüfe, ob der User auf seinem Land steht
+		//PrÂ§fe, ob der User auf seinem Land steht
 		if (Chunk5.getInstance().config.landManager.isBoughtByPlayer(playerLocation.getChunk(), p)) {
 			//Villager erstellen und spawnen
 			Villager villager = (Villager) playerLocation.getWorld().spawnEntity(playerLocation, EntityType.VILLAGER);
-			villager.setCustomName("§7[§bShop] §c§oNeuer Shop");
+			villager.setCustomName("Â§7[Â§bShop] Â§cÂ§oNeuer Shop");
 			villager.setCustomNameVisible(true);
 			
 			//UserShop registrieren
 			UserShop shop = new UserShop(villager.getUniqueId(), p.getUniqueId());
-			shop.setTitle("§c§oNeuer Shop");
+			shop.setTitle("Â§cÂ§oNeuer Shop");
 			Main.getInstance().getShopManager().addShop(shop);
 		}
 		else {
-			p.sendMessage("§4ERROR: §cDas Land, auf dem du stehst, gehört dir nicht.");
+			p.sendMessage("Â§4ERROR: Â§cDas Land, auf dem du stehst, gehÂ§rt dir nicht.");
 			p.playSound(playerLocation, Sound.BLOCK_NOTE_BASS, 1f, 1f);
 		}
 	}

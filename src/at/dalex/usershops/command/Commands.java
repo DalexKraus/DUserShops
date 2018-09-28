@@ -15,10 +15,10 @@ public class Commands implements CommandExecutor {
 			Player p = (Player) sender;
 			if (args.length < 0) {
 				p.sendMessage("");
-				p.sendMessage("§8---===[§1UserShops§8]===---");
-				p.sendMessage("§8Folgende Befehle sind akzeptabel:");
+				p.sendMessage("Â§8---===[Â§1UserShopsÂ§8]===---");
+				p.sendMessage("Â§8Folgende Befehle sind akzeptabel:");
 				p.sendMessage("");
-				p.sendMessage("§8/§1shop §5create");
+				p.sendMessage("Â§8/Â§1shop Â§5create");
 			}
 			else {
 				if (args[0].equalsIgnoreCase("create")) {

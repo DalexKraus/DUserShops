@@ -21,7 +21,7 @@ public class ShopInteractListener implements Listener {
 	public void onInteract(PlayerInteractEntityEvent e) {
 		if (e.getRightClicked() instanceof Villager) {
 			Villager villager = (Villager) e.getRightClicked();
-			//Ist ein gültiger UserShop
+			//Ist ein gÃ¼ltiger UserShop
 			if (Main.getInstance().getShopManager().isShop(villager.getUniqueId())) {
 				e.setCancelled(true);
 				UserShop shop = Main.getInstance().getShopManager().getShop(villager.getUniqueId());

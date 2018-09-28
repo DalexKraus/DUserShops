@@ -20,10 +20,10 @@ public class ShopStorageSaveListener implements Listener {
 	@EventHandler
 	public void onCloseInventory(InventoryCloseEvent e) {
 		String inventoryTitle = e.getInventory().getName();
-		if (inventoryTitle.contains(" §7- §6Lager")) {
-			String shopName = inventoryTitle.replaceAll(" §7- §6Lager", "");
+		if (inventoryTitle.contains(" Â§7- Â§6Lager")) {
+			String shopName = inventoryTitle.replaceAll(" Â§7- Â§6Lager", "");
 			if (Main.getInstance().getShopManager().isShopInventory(shopName)) {
-				/* Lager überschreiben */
+				/* Lager Ã¼berschreiben */
 				UserShop shop = Main.getInstance().getShopManager().getShopByInventory(shopName);
 				shop.getStoredItems().clear();
 				for (int i = 9; i < 27; i++) {
