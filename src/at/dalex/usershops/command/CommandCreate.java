@@ -28,7 +28,7 @@ public class CommandCreate implements ICommand {
 			Main.getInstance().getShopManager().addShop(shop);
 		}
 		else {
-			p.sendMessage("§4ERROR: §cDas Land, auf dem du stehst, geh§rt dir nicht.");
+			p.sendMessage("§4ERROR: §cDas Land, auf dem du stehst, gehört dir nicht.");
 			p.playSound(playerLocation, Sound.BLOCK_NOTE_BASS, 1f, 1f);
 		}
 	}
