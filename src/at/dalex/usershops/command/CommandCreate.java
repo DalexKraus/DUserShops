@@ -15,7 +15,7 @@ public class CommandCreate implements ICommand {
 	@Override
 	public void execute(Player p, String[] args) {
 		Location playerLocation = p.getLocation();
-		//Pr§fe, ob der User auf seinem Land steht
+		//Prüfe, ob der User auf seinem Land steht
 		if (Chunk5.getInstance().config.landManager.isBoughtByPlayer(playerLocation.getChunk(), p)) {
 			//Villager erstellen und spawnen
 			Villager villager = (Villager) playerLocation.getWorld().spawnEntity(playerLocation, EntityType.VILLAGER);
